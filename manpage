@@ -1,0 +1,38 @@
+.TH pskcparse 1 "5 May 2013" "Version 1.0"
+.SH NAME
+pskcparse - a modular PSKC document parser
+.SH SYNOPSIS
+.B [-h] [--filter \fIFILTER\fB]
+.B [-m \fIMODULE\fB]
+.I file
+
+.SH DESCRIPTION
+
+.SH OPTIONS
+.TP
+.B -h, --help
+Prints the usage for the parser. Will also print usage of a module if the
+.I -m/--module
+argument is used.
+.TP
+.B "--filter \fIfilter\fB"
+Will do a substring search for
+.I filter 
+in key's Id and UserId elements and only parse matching elements.
+.TP
+.B \fB"-m --module \fIfilename\fB"
+Use a module designated by
+.I filename
+from the modules folder as the output for the parser.
+Also prints out the usage for the module when used with
+.I -h
+.TP
+.I file
+Uses the filename designated by
+.I document
+as input for the parser.
+
+.SH EXAMPLES
+
+
+

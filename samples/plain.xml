@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <KeyContainer Version="1.0"
+        xmlns="urn:ietf:params:xml:ns:keyprov:pskc">
+       <KeyPackage>
+           <DeviceInfo>
+               <Manufacturer>Manufacturer</Manufacturer>
+               <SerialNo>987654321</SerialNo>
+               <UserId>DC=example-bank,DC=net</UserId>
+               <Model>one-button-HOTP-token-V1</Model>
+               <IssueNo>1</IssueNo>
+               <DeviceBinding>something</DeviceBinding>
+               <StartDate>2009-01-22T00:25:11Z</StartDate>
+               <ExpiryDate>2010-01-22T00:25:11Z</ExpiryDate>
+           </DeviceInfo>
+           <CryptoModuleInfo>
+               <Id>CM_ID_001</Id>
+           </CryptoModuleInfo>
+           <Key
+               Algorithm="algorithm">
+               <Issuer>Issuer</Issuer>
+               <FriendlyName>I-am-friendly</FriendlyName>
+               <AlgorithmParameters>
+                   <ResponseFormat Length="8" Encoding="DECIMAL"/>
+               </AlgorithmParameters>
+               <Policy>
+                   <PINPolicy MinLength="4" MaxLength="4"
+                       PINKeyId="123456781" PINEncoding="DECIMAL"
+                       PINUsageMode="Local"/>
+                   <KeyUsage>OTP</KeyUsage>
+                   <StartDate>2009-01-22T00:25:11Z</StartDate>
+                   <ExpiryDate>2010-01-22T00:25:11Z</ExpiryDate>
+               </Policy>
+               <Data>
+                   <Secret>
+                       <PlainValue>MTIzNDU2Nzg5MDEyMzQ1Njc4OTA=
+                       </PlainValue>
+                   </Secret>
+                   <Counter>
+                       <PlainValue>0</PlainValue>
+                   </Counter>
+                   <Time>
+                       <PlainValue>42</PlainValue>
+                   </Time>
+                   <TimeInterval>
+                       <PlainValue>30</PlainValue>
+                   </TimeInterval>
+               </Data>
+               <UserId>UID=jsmith,DC=example-bank,DC=net</UserId>
+           </Key>
+     </KeyPackage>
+   </KeyContainer>
